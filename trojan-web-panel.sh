@@ -53,7 +53,7 @@ if test -s /etc/systemd/system/trojan-web.service; then
 	systemctl stop nginx
 if test -s /etc/nginx/nginx.conf; then
 	rm -rf /etc/nginx/nginx.conf
-  wget -P /etc/nginx https://raw.githubusercontent.com/V2RaySSR/Trojan_panel_web/master/nginx.conf
+  wget -P /etc/nginx https://raw.githubusercontent.com/vvvvvv/Trojan_panel_web/master/nginx.conf
 	green "================================="
 	blue "     请输入Trojan绑定的域名"
 	green "================================="
@@ -66,7 +66,7 @@ if test -s /etc/nginx/nginx.conf; then
 	sleep 2s
 	rm -rf /usr/share/nginx/html/*
 	cd /usr/share/nginx/html/
-	wget https://github.com/V2RaySSR/Trojan/raw/master/web.zip
+	wget https://github.com/vvvvvv/Trojan/raw/master/web.zip
 	unzip web.zip
 	green " "
 	green "================================="
@@ -82,11 +82,6 @@ if test -s /etc/nginx/nginx.conf; then
   green " "
   green " "
 	green "=================================================================="
-	green " "
-	 blue "  WIN / MAC 通用客户端下载、本脚本更多介绍内容 "
-	 blue "  https://www.v2rayssr.com/trojanpanel.html "
-	green " "
-	 blue "  脚本交流电报群：https://goii.cc/tg"
 	green " "
 	 blue "  伪装站点目录 /usr/share/nginx/html "
 	 blue "  面板管理地址 http://$your_domain:81 "
@@ -120,11 +115,7 @@ trojan_install(){
 start_menu(){
   clear
 	green "=========================================================="
-   blue " 本脚本支持：Debian9+ / Ubuntu16.04+ / Centos7+"
-	 blue " 网站：www.v2rayssr.com （已开启禁止国内访问）"
-	 blue " YouTube频道：波仔分享"
-	 blue " 本脚本禁止在国内任何网站转载"
-	green "=========================================================="
+   blue " 本脚本支持：Debian9+ / Ubuntu16.04+ / Centos7+"	 
    blue " 简介：一键更改 Trojan-Panel 面板端口并设置伪装站点"
 	green "=========================================================="
 	  red " 运行本脚本之前请确认已经安装Jrohy大神的面板程序"
