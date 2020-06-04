@@ -53,7 +53,7 @@ if test -s /etc/systemd/system/trojan-web.service; then
 	systemctl stop nginx
 if test -s /etc/nginx/nginx.conf; then
 	rm -rf /etc/nginx/nginx.conf
-  wget -P /etc/nginx https://raw.githubusercontent.com/vvvvvv/Trojan_panel_web/master/nginx.conf
+  wget -P /etc/nginx https://raw.githubusercontent.com/birbiekingkong/vvvvvv/master/nginx.conf
 	green "================================="
 	blue "     请输入Trojan绑定的域名"
 	green "================================="
@@ -66,8 +66,8 @@ if test -s /etc/nginx/nginx.conf; then
 	sleep 2s
 	rm -rf /usr/share/nginx/html/*
 	cd /usr/share/nginx/html/
-	wget https://github.com/vvvvvv/Trojan/raw/master/web.zip
-	unzip web.zip
+	wget https://github.com/barbiekingkong/vvvvvv/master/templated-hielo.zip
+	unzip templated-hielo.zip
 	green " "
 	green "================================="
 	blue "       开始配置trojan-web"
@@ -122,7 +122,7 @@ start_menu(){
 	green "=========================================================="
 	 blue " 1. Jrohy大神的 Trojan 多用户管理部署程序"
    blue " 2. 更改 Trojan 面板端口并设置伪装站点"
-   blue " 3. 安装 BBRPlus4 合一加速"
+   blue " 3. 先安装 BBRPlus4 合一加速重启并启用"
    blue " 0. 退出脚本"
     echo
     read -p "请输入数字:" num
